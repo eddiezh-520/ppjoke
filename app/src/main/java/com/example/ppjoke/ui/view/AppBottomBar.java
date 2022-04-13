@@ -80,8 +80,6 @@ public class AppBottomBar extends BottomNavigationView {
 
             //为中间那个没有title的底部按钮设置着色
             if (TextUtils.isEmpty(tab.title)) {
-                Log.d("AppBottomBar","tab pageUrl:" + tab.pageUrl);
-                Log.d("AppBottomBar","tab tintColor:" + tab.tintColor);
                 int tintColor = TextUtils.isEmpty(tab.tintColor) ? Color.parseColor("#ff678f") : Color.parseColor(tab.tintColor);
                 itemView.setIconTintList(ColorStateList.valueOf(tintColor));
                 //让中间按钮不可以上下浮动
