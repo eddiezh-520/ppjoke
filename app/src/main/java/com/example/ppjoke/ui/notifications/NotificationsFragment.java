@@ -1,6 +1,7 @@
 package com.example.ppjoke.ui.notifications;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import com.example.ppjoke.databinding.FragmentNotificationsBinding;
 @FragmentDestination(pageUrl = "main/tabs/find",asStarter = false)
 public class NotificationsFragment extends Fragment {
 
+    private static final String TAG = "NotificationsFragment";
     private NotificationsViewModel notificationsViewModel;
     private FragmentNotificationsBinding binding;
 
@@ -36,6 +38,7 @@ public class NotificationsFragment extends Fragment {
                 textView.setText(s);
             }
         });
+        Log.d(TAG,"onCreateView");
         return root;
     }
 

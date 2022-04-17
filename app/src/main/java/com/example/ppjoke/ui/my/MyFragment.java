@@ -1,6 +1,7 @@
 package com.example.ppjoke.ui.my;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,7 @@ import com.example.ppjoke.ui.home.HomeViewModel;
 @FragmentDestination(pageUrl = "main/tabs/my",needLogin = true)
 public class MyFragment extends Fragment {
 
+    private static final String TAG = "MyFragment";
     private MyViewModel myViewModel;
     private FragmentMyBinding binding;
 
@@ -38,6 +40,7 @@ public class MyFragment extends Fragment {
                 textView.setText(s);
             }
         });
+        Log.d(TAG,"onCreateView");
         return root;
     }
 

@@ -1,6 +1,8 @@
 package com.example.ppjoke.ui.home;
 
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +20,7 @@ import com.example.ppjoke.databinding.FragmentHomeBinding;
 @FragmentDestination(pageUrl = "main/tabs/home",asStarter = true)
 public class HomeFragment extends Fragment {
 
+    private static final String TAG = "HomeFragment";
     private HomeViewModel homeViewModel;
     private FragmentHomeBinding binding;
 
@@ -36,6 +39,7 @@ public class HomeFragment extends Fragment {
                 textView.setText(s);
             }
         });
+        Log.d(TAG,"onCreateView");
         return root;
     }
 

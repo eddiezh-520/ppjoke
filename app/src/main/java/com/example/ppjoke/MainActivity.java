@@ -10,6 +10,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -45,7 +46,10 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
 
-        NavGraphBuilder.build(navController);
+        //get fragment
+//        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main);
+
+        NavGraphBuilder.build(navController,this,this.getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main).getId());
         navView.setOnItemSelectedListener(item -> {
             // do stuff
             navController.navigate(item.getItemId());

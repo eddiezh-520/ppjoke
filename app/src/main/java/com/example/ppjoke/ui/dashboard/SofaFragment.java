@@ -1,6 +1,7 @@
 package com.example.ppjoke.ui.dashboard;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import com.example.ppjoke.databinding.FragmentDashboardBinding;
 @FragmentDestination(pageUrl = "main/tabs/sofa",asStarter = false)
 public class SofaFragment extends Fragment {
 
+    private static final String TAG = "SofaFragment";
     private DashboardViewModel dashboardViewModel;
     private FragmentDashboardBinding binding;
 
@@ -36,6 +38,7 @@ public class SofaFragment extends Fragment {
                 textView.setText(s);
             }
         });
+        Log.d(TAG,"onCreateView");
         return root;
     }
 
