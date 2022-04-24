@@ -20,6 +20,8 @@ import okhttp3.logging.HttpLoggingInterceptor;
 public class ApiService {
 
     protected static final OkHttpClient okHttpClient;
+    protected static String sBaseUrl;
+    protected static Convert sConvert;
 
     static {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
@@ -60,5 +62,13 @@ public class ApiService {
         }catch (KeyManagementException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void init(String baseUrl, Convert convert) {
+        sBaseUrl = baseUrl;
+        if (convert == null) {
+            convert = new JsonConvert();
+        }
+        sConvert = convert;
     }
 }

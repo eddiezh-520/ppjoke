@@ -1,6 +1,5 @@
 package com.example.ppjoke.utils;
 
-import android.app.Activity;
 import android.content.ComponentName;
 
 import androidx.fragment.app.FragmentActivity;
